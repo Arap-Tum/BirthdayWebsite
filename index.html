@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="content">
+            <h1 id="hero-title">🎉 Happy Birthday!</h1>
+            <p id="hero-subtitle">Celebrating another wonderful year</p>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery-section">
+        <div class="container">
+            <h2>Celebrating Memories</h2>
+            <div class="gallery" id="gallery"></div>
+        </div>
+               <!-- Lightbox -->
+        <div id="lightbox">
+            <span id="close-btn">&times;</span>
+            <img src="" alt="Enlarged memory" id="lightbox-img">
+        </div>
+
+
+    </section>
+
+    <!-- Tribute Section -->
+    <section id="tribute">
+        <div class="container">
+            <p id="tribute-text"></p>
+        </div>
+    </section>
+
+    <!-- Verse Section -->
+    <section id="verse">
+        <div class="container">
+            <p id="verse-text"></p>
+            <p id="verse-reference"></p>
+            <p>Your verse this year</p>
+        </div>
+    </section>
+
+    <!-- Wishes Section
+    <section id="wishes-section">
+        <div class="container">
+            <h2>Birthday Wishes</h2>
+            <div class="wishes" id="wishes"></div>
+            <button id="show-more">Send Him  Wishes</button>
+        </div>
+    </section> -->
+
+    <!-- Timeline Section -->
+    <section id="timeline-section">
+        <!-- <div class="container">
+            <h2>Facts About <span id="timeline-name"></span></h2>
+            <div class="timeline" id="timeline"></div>
+        </div> -->
+    </section>
+
+    <!-- Closing Section -->
+    <section id="closing">
+        <div class="container">
+            <p id="closing-message"></p>
+            <div id="countdown-container">
+                <p>Time left to celebrate:</p>
+                <p id="countdown"></p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Made with ❤️ for <span id="footer-name"></span></p>
+    </footer>
+
+   <!-- Floating CTA -->
+<a href="#" class="floating-cta" id="open-form">🎉 Send a Birthday Wish!</a>
+
+<!-- Popup Form -->
+<div class="form-overlay" id="form-overlay">
+  <div class="popup-form">
+    <span class="close-btn" id="close-form">&times;</span>
+    <h2>Send a Birthday Wish 🎈</h2>
+    <form id="form">
+      <div class="field">
+        <label for="from_name">Your Name</label>
+        <input type="text" name="from_name" id="from_name" placeholder="Enter your name" required>
+      </div>
+      <div class="field">
+        <label for="formatted_message">Your Message</label>
+        <textarea name="formatted_message" id="formatted_message" placeholder="Write a heartfelt message..." rows="4" required></textarea>
+      </div>
+      <input type="submit" id="button" value="Send Message">
+    </form>
+  </div>
+</div>
+
+<!-- ✅ Success Message Popup -->
+<!-- <div id="success-popup" class="popup-message hidden">
+    <p>🎉 Message sent successfully!</p>
+  </div> -->
+
+  <div id="success-popup" class="popup-message hidden">
+    <div class="popup-content">
+      <span class="popup-icon">✅</span>
+      <p class="popup-text">Message sent successfully!</p>
+    </div>
+  </div>
+
+
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+      
+      <script type="text/javascript">
+        emailjs.init('RuRptKG393PnVez71')
+</script>
+
+
+    <script type="module" src="script.js"></script>
+   
+</body>
+</html>
