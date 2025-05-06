@@ -75,17 +75,8 @@ import {sampleData} from "./data.js"
             // Verse Section
             document.getElementById('verse-text').textContent = data.verseText;
             document.getElementById('verse-reference').textContent = data.verseReference;
-            
-     
-            // Closing Section
-            document.getElementById('closing-message').textContent = data.closingMessage;
-            updateCountdown();
-            setInterval(updateCountdown, 1000);
-            
-            // Footer
-            document.getElementById('footer-name').textContent = data.name;
-        }
-        const targetDate = new Date("May 10, 2025 00:00:00").getTime();
+
+            const targetDate = new Date("May 10, 2025 00:00:00").getTime();
             const countdown = setInterval(() => {
             const now = new Date().getTime();
             const distance = targetDate - now;
@@ -101,9 +92,22 @@ import {sampleData} from "./data.js"
             const minutes = Math.floor((distance / (1000 * 60)) % 60);
             const seconds = Math.floor((distance / 1000) % 60);
 
+            document.getElementById('closing-message').textContent = data.closingMessage;
+
             document.getElementById("countdown").innerHTML = 
                 `${days}d ${hours}h ${minutes}m ${seconds}s left`;
             }, 1000);
+            
+     
+            // Closing Section
+            
+            // updateCountdown();
+            // setInterval(updateCountdown, 1000);
+            
+            // Footer
+            document.getElementById('footer-name').textContent = data.name;
+        }
+       
 
 
    
